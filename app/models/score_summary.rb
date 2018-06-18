@@ -1,0 +1,2 @@
+class ScoreSummary < ApplicationRecord
+end
