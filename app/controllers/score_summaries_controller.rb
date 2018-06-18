@@ -22,6 +22,8 @@ class ScoreSummariesController < ApplicationController
     else
       render json: @score_summary.errors, status: :unprocessable_entity
     end
+
+
   end
 
   # PATCH/PUT /score_summaries/1
@@ -32,6 +34,15 @@ class ScoreSummariesController < ApplicationController
       render json: @score_summary.errors, status: :unprocessable_entity
     end
   end
+
+  def see_score
+    render json: ScoreSummary.increment(params[:score].to_i), status: :ok
+  end
+
+  def save_score
+    render json: ScoreSummary.increment(params[:score].to_i), status: :created
+  end
+
 
   # DELETE /score_summaries/1
   def destroy
@@ -46,6 +57,6 @@ class ScoreSummariesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def score_summary_params
-      params.require(:score_summary).permit(:score, :reachedby)
+      params.require(:score_summary).permit(:score, :reachedby, :u)
     end
 end
