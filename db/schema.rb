@@ -19,11 +19,4 @@ ActiveRecord::Schema.define(version: 20180618045350) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "scores", force: :cascade do |t|
-    t.string "user"
-    t.integer "highscore"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
