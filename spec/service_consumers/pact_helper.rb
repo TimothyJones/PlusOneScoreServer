@@ -11,6 +11,6 @@ Pact.service_provider "The Plus One Game ScoreBoard Service" do
     pact_uri "https://#{ENV['PACT_BROKER_USERNAME']}:#{ENV['PACT_BROKER_PASSWORD']}@test.pact.dius.com.au/pacts/provider/The%20Plus%20One%20Game%20ScoreBoard%20Service/consumer/The%20Plus%20One%20Game%20Client/latest"
   end
 
-  app_version "1.0.0"
+  app_version "1.0.1"
   publish_verification_results true
 end
