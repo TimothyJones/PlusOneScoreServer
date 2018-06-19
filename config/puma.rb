@@ -7,9 +7,6 @@
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
 
-# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
-#
-port        ENV.fetch("PORT") { 3000 }
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
@@ -29,7 +26,7 @@ workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 preload_app!
 
 rackup      DefaultRackup
-port        ENV['PORT']     || 3000
+port        ENV.fetch("PORT") { 3000 }
 environment ENV['RACK_ENV'] || 'development'
 
 # If you are preloading your application and using Active Record, it's
