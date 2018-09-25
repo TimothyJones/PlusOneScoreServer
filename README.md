@@ -6,4 +6,11 @@ This is the ScoreBoard server for [The PlusOne Game](https://timothyjones.github
 
 It's a quick and dirty rails app. It communicates with [The Plus One Client](https://github.com/TimothyJones/PlusOne), under a contract tested with [Pact](http://pact.io).
 
+Verify the pact with:
+
+    rake pact:verify
+
+Start the server with:
+
+    rails server
 
